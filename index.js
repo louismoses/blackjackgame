@@ -1,5 +1,6 @@
 let firstCard = Math.floor(Math.random() * (12 - 2) + 2);
 let secondCard = Math.floor(Math.random() * (12 - 2) + 2);
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
@@ -9,7 +10,10 @@ let sumEl = document.querySelector(".sum-el");
 let cardEl = document.querySelector(".card-el");
 
 function startGame() {
-  cardEl.textContent = "Cards: " + firstCard + " " + secondCard;
+  renderGame();
+}
+function renderGame() {
+  cardEl.textContent = "Cards: " + cards[0] + " " + cards[1];
   sumEl.textContent = "Sum: " + sum;
   if (sum <= 20) {
     message = "Do you want to draw another card?";
@@ -24,10 +28,17 @@ function startGame() {
   messageEl.textContent = message;
 }
 function newCard() {
-  console.log("need new card");
+  let addCard = Math.floor(Math.random() * (12 - 2) + 2);
+  sum += addCard;
+  renderGame();
 }
 
 // scratch section
-
+let experience = [
+  "System Admin Assistant",
+  "Frontend Developer",
+  "Wordpress Developee",
+];
 // end scratch section
-// lesson time stamp 2:21:59
+
+// lesson time stamp 2:41:32
