@@ -1,0 +1,8 @@
+body {
+  background-image: url("images/table.jpg");
+  font-family: "Trebuchet MS", "Lucida Sans Unicode";
+  background-size: cover;
+}
+h1 {
+  color: gold;
+}
