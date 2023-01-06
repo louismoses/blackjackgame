@@ -34,11 +34,9 @@ function newCard() {
 }
 
 // scratch section
-let experience = [
-  "System Admin Assistant",
-  "Frontend Developer",
-  "Wordpress Developee",
-];
+let myDescription = ["Louis Moses", 31, true];
+
+console.log(myDescription);
 // end scratch section
 
-// lesson time stamp 2:41:32
+// lesson time stamp 2:47:47
