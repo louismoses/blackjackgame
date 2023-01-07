@@ -39,4 +39,4 @@ let myDescription = ["Louis Moses", 31, true];
 console.log(myDescription);
 // end scratch section
 
-// lesson time stamp 2:47:47
+// lesson time stamp 2:48:00
