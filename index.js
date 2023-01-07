@@ -29,14 +29,21 @@ function renderGame() {
 }
 function newCard() {
   let addCard = Math.floor(Math.random() * (12 - 2) + 2);
+  cards.push(addCard);
+  console.log(cards);
   sum += addCard;
   renderGame();
 }
 
 // scratch section
-let myDescription = ["Louis Moses", 31, true];
-
-console.log(myDescription);
+let messages = [
+  "hey. how's it going",
+  "I'm great, thank you! How about you?",
+  "All good. Been working on my portfolio lately",
+];
+let newMessage = "Same here!";
+messages.push(newMessage);
+console.log(messages);
 // end scratch section
 
 // lesson time stamp 2:48:00
