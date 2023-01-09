@@ -44,12 +44,11 @@ let player1Time = 102;
 let player2Time = 107;
 
 function totalRaceTime() {
-  let totalTime = player1Time + player2Time;
-  return totalTime;
+  return player1Time + player2Time;
 }
-let newVariable = totalRaceTime;
+let newVariable = totalRaceTime();
 console.log(newVariable);
 
 // end scratch section
 
-// lesson time stamp 3:17:43
+// lesson time stamp 3:18:24
