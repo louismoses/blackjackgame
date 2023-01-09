@@ -13,7 +13,12 @@ function startGame() {
   renderGame();
 }
 function renderGame() {
-  cardEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+  cardEl.textContent = "Cards: ";
+
+  for (let i = 0; i < cards.length; i++) {
+    cardEl.textContent += cards[i] + " ";
+  }
+
   sumEl.textContent = "Sum: " + sum;
   if (sum <= 20) {
     message = "Do you want to draw another card?";
@@ -30,20 +35,21 @@ function renderGame() {
 function newCard() {
   let addCard = Math.floor(Math.random() * (12 - 2) + 2);
   cards.push(addCard);
-  console.log(cards);
   sum += addCard;
   renderGame();
 }
 
 // scratch section
-let messages = [
-  "hey. how's it going",
-  "I'm great, thank you! How about you?",
-  "All good. Been working on my portfolio lately",
-];
-let newMessage = "Same here!";
-messages.push(newMessage);
-console.log(messages);
+let player1Time = 102;
+let player2Time = 107;
+
+function totalRaceTime() {
+  let totalTime = player1Time + player2Time;
+  return totalTime;
+}
+let newVariable = totalRaceTime;
+console.log(newVariable);
+
 // end scratch section
 
-// lesson time stamp 2:48:00
+// lesson time stamp 3:17:43
