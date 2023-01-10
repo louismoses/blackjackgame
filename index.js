@@ -9,7 +9,7 @@ let cardEl = document.querySelector(".card-el");
 
 let player = {
   name: "Moses",
-  chips: 145,
+  chips: 146,
 };
 
 let playerEl = document.getElementById("player-el");
@@ -67,7 +67,15 @@ function newCard() {
 }
 
 // scratch section +++++++++++++++++++++
-
+let castle = {
+  title: "Notre Dam",
+  availability: false,
+  rooms: 4,
+  tags: ["luxury", "view"],
+};
+console.log(castle);
+console.log(castle.tags);
+console.log(castle.rooms);
 // end scratch section +++++++++++++++++
 
-// lesson time stamp 3:18:59
+// lesson time stamp 3:58:15
