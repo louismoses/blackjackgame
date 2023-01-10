@@ -1,16 +1,32 @@
-let firstCard = Math.floor(Math.random() * (12 - 2) + 2);
-let secondCard = Math.floor(Math.random() * (12 - 2) + 2);
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.querySelector(".sum-el");
 let cardEl = document.querySelector(".card-el");
 
+function getRandomCard() {
+  let randomNumber = Math.floor(Math.random() * 13 + 1);
+  if (randomNumber > 10) {
+    return 10;
+  } else if (randomNumber === 1) {
+    return 11;
+  } else {
+    return randomNumber;
+  }
+}
+
 function startGame() {
-  renderGame();
+  if (isAlive === false) {
+    isAlive = true;
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+    renderGame();
+  }
 }
 function renderGame() {
   cardEl.textContent = "Cards: ";
@@ -32,23 +48,18 @@ function renderGame() {
 
   messageEl.textContent = message;
 }
+
 function newCard() {
-  let addCard = Math.floor(Math.random() * (12 - 2) + 2);
-  cards.push(addCard);
-  sum += addCard;
-  renderGame();
+  if (isAlive === true && hasBlackJack === false) {
+    let addCard = getRandomCard();
+    sum += addCard;
+    cards.push(addCard);
+    renderGame();
+  }
 }
 
-// scratch section
-let player1Time = 102;
-let player2Time = 107;
+// scratch section +++++++++++++++++++++
 
-function totalRaceTime() {
-  return player1Time + player2Time;
-}
-let newVariable = totalRaceTime();
-console.log(newVariable);
+// end scratch section +++++++++++++++++
 
-// end scratch section
-
-// lesson time stamp 3:18:24
+// lesson time stamp 3:18:59
